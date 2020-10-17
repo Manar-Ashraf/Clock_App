@@ -21,7 +21,7 @@ ThemeData themeData(BuildContext context) {
     textTheme: GoogleFonts.latoTextTheme().copyWith(
       bodyText1: TextStyle(color: kBodyTextColorLight),
       bodyText2: TextStyle(color: kBodyTextColorLight),
-      headline4: TextStyle(color: kTitleTextLightColor, fontSize: 32),
+      headline4: TextStyle(color: kTitleTextLightColor, fontSize: 24),
       headline1: TextStyle(color: kTitleTextLightColor, fontSize: 60),
     ),
   );
@@ -45,7 +45,7 @@ ThemeData darkThemeData(BuildContext context) {
     textTheme: GoogleFonts.latoTextTheme().copyWith(
       bodyText1: TextStyle(color: kBodyTextColorDark),
       bodyText2: TextStyle(color: kBodyTextColorDark),
-      headline4: TextStyle(color: kTitleTextDarkColor, fontSize: 32),
+      headline4: TextStyle(color: kTitleTextDarkColor, fontSize: 24),
       headline1: TextStyle(color: kTitleTextDarkColor, fontSize: 60),
     ),
   );

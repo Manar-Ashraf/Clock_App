@@ -1,3 +1,4 @@
+import 'package:alarm/services/world_time.dart';
 import 'package:alarm/size_config.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -7,6 +8,16 @@ import 'country_card.dart';
 import 'time_in_hour_and_minute.dart';
 
 class Body extends StatelessWidget {
+ /* Future<String> setupWorldTime(String url)async{
+String time;
+  WorldTime instance=WorldTime(url:url );
+    await instance.getTime();
+    return  time=instance.time;
+  }*/
+//String a=('Europe/Istanbul');
+
+
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -30,71 +41,81 @@ class Body extends StatelessWidget {
                     country: "Istanbul, Turkey",
                     timeZone: "+1 HRS ",
                     iconSrc: "assets/icons/galata.svg",
-                    time: '4:40',
-                    period: 'AM',
+                    time: '..:..',
+                    url: 'Europe/Istanbul',
                   ),
                   CountryCard(
                     country: "Paris, France",
                     timeZone: "+0 HRS ",
                     iconSrc: "assets/icons/paris.svg",
-                    time: "1:20",
-                    period: "AM",
+                    url: 'Europe/Paris',
+                    time: '..:..',
+
                   ),
                   CountryCard(
                     country: "Cairo, Egypt",
                     timeZone: "+0 HRS ",
                     iconSrc: "assets/icons/pyramids.svg",
-                    time: '4:40',
-                    period: 'AM',
+                    url: 'Africa/Cairo',
+                    time: '..:..',
+
                   ),
                   CountryCard(
                     country: "London, England",
                     timeZone: "-1 HRS ",
                     iconSrc: "assets/icons/big_ben.svg",
-                    time: '4:40',
-                    period: 'AM',
+                    url: 'Europe/London',
+                    time: '..:..',
+
                   ),
+
                   CountryCard(
-                    country: "Moscow, Russia",
+                    country: "Yekaterinburg, Russia",
                     timeZone: "+1 HRS ",
                     iconSrc: "assets/icons/moscow.svg",
-                    time: '4:40',
-                    period: 'AM',
+                    url: 'Asia/Yekaterinburg',
+                    time: '..:..',
+
                   ),
                   CountryCard(
                     country: "Rome, Italy",
                     timeZone: "+0 HRS ",
                     iconSrc: "assets/icons/Rome.svg",
-                    time: '4:40',
-                    period: 'AM',
+                    url: 'Europe/Rome',
+                    time: '..:..',
+
                   ),
                   CountryCard(
                     country: "Berlin, Germany",
                     timeZone: "+0 HRS ",
                     iconSrc: "assets/icons/Berlin.svg",
-                    time: '4:40',
-                    period: 'AM',
+                    url: 'Europe/Berlin',
+                    time: '..:..',
+
                   ),
                   CountryCard(
-                    country: "Beijing, China",
+                    country: "Hong_Kong, China",
                     timeZone: "+6 HRS ",
                     iconSrc: "assets/icons/china.svg",
-                    time: '4:40',
-                    period: 'AM',
+                    url: 'Asia/Hong_Kong',
+                    time: '..:..',
+
                   ),
                   CountryCard(
-                    country: "Mumbai, India",
+                    country: "Kolkata, India",
                     timeZone: "+3:30 HRS ",
                     iconSrc: "assets/icons/india.svg",
-                    time: '4:40',
-                    period: 'AM',
+                    url: 'Asia/Kolkata',
+                    time: '..:..',
+
                   ),
                   CountryCard(
                     country: "Toronto, Canada",
                     timeZone: "-6 HRS ",
                     iconSrc: "assets/icons/canada.svg",
-                    time: '4:40',
-                    period: 'AM',
+                    url: 'America/Toronto',
+                    time: '..:..',
+
                   ),
                 ],
               ),
