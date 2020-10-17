@@ -25,4 +25,10 @@ flutter:
   assets:
     - assets/icons/
     - assets/other/
+fonts:
+  - family: SourceSansPro
+    fonts:
+      - asset: fonts/SourceSansPro-Black.ttf
+      - asset: fonts/SourceSansPro-Regular.ttf
+        weight: 700
 
