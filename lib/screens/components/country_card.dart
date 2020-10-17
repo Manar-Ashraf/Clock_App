@@ -1,21 +1,60 @@
+import 'dart:async';
+import 'package:alarm/services/world_time.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-
 import '../../size_config.dart';
 
-class CountryCard extends StatelessWidget {
-  const CountryCard({
-    Key key,
+class CountryCard extends StatefulWidget {
+  CountryCard({
+    this.time,
+    this.country,
+    this.timeZone,
+    this.iconSrc,
+    this.url,//location url for api endpoint
+  }
+  );
+
+  String country, timeZone,time, iconSrc,url;
+
+
+
+  @override
+
+  _CountryCardState createState() => _CountryCardState(timeZone: timeZone, time: time, country: country, iconSrc: iconSrc,url: url);
+}
+
+
+class _CountryCardState extends State<CountryCard> {
+  _CountryCardState({
     @required this.country,
     @required this.timeZone,
     @required this.iconSrc,
     @required this.time,
-    @required this.period,
-  }) : super(key: key);
+    @required this.url,//location url for api endpoint
+  });
 
-  final String country, timeZone, iconSrc, time, period;
+  String country, timeZone, iconSrc, time,url;
+  void setupWorldTime()async{
+    WorldTime instance=WorldTime(url:url );
+    await instance.getTime();
+    setState(() {
+      time=instance.time;
+    });
+
+  }
+  @override
+  void initState() {
+    super.initState();
+    Timer.periodic(Duration(seconds: 1), (timer) {
+      setState(() {
+        setupWorldTime();
+
+      });
+    });
+  }
 
   @override
+
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.only(left: getProportionateScreenWidth(20)),
@@ -53,13 +92,11 @@ class CountryCard extends StatelessWidget {
                     ),
                     Spacer(),
                     Text(
-                      time,
-                      style: Theme.of(context).textTheme.headline4,
-                    ),
-                    RotatedBox(
-                      quarterTurns: 3,
-                      child: Text(period),
-                    ),
+                        time,
+                        style:/*TextStyle(fontSize: 10),*/Theme.of(context).textTheme.headline4,softWrap: true,
+                      ),
+
+
                   ],
                 )
               ],
@@ -67,6 +104,5 @@ class CountryCard extends StatelessWidget {
           ),
         ),
       ),
-    );
-  }
+    );  }
 }
