@@ -5,7 +5,7 @@ const kPrimaryColor = Color(0xFFFF97B3);
 const kSecondaryLightColor = Color(0xFFE4E9F2);
 const kSecondaryDarkColor = Color(0xFF404040);
 const kAccentLightColor = Color(0xFFB3BFD7);
-const kAccentDarkColor = Color(0xFF4E4E4E);
+const kAccentDarkColor = Color(0xFFCFD8DC) ;
 const kBackgroundDarkColor = Color(0xFF3A3A3A);
 const kSurfaceDarkColor = Color(0xFF222225);
 // Icon Colors
