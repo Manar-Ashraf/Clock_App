@@ -14,6 +14,7 @@ class AddAlarm extends StatefulWidget {
 class _AddAlarmState extends State<AddAlarm> {
   TimeOfDay _selectedTime;
   ValueChanged<TimeOfDay> selectTime;
+  bool a=true,b=false,c=true,d=true,e=true,f=true,g=true;
 
   // get isAfter => null;
   @override
@@ -48,13 +49,13 @@ class _AddAlarmState extends State<AddAlarm> {
           child: Column(
               children: <Widget>[
                 SizedBox(
-                  height: 60.0,
+                  height: 40.0,
                 ),
                 new GestureDetector(
                   child: Text(
                     _selectedTime.format(context),
                     style: TextStyle(
-                      fontSize: 60.0,
+                      fontSize: 40.0,
                       fontWeight: FontWeight.bold,
                       color: Colors.white,
                     ),
@@ -63,23 +64,68 @@ class _AddAlarmState extends State<AddAlarm> {
                     _selectTime(context);
                   },
                 ),
-                SizedBox(
-                  height: 30.0,
+                SizedBox(height: 30.0,),
+                Expanded(
+
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+
+                    children: <Widget>[
+                      GestureDetector(
+                          onTap: (){
+                            setState(() {
+                              a?a=false:a=true;
+                            });
+                          },
+                          child: circleDay('Mon', context, a)),
+                      GestureDetector(
+                          onTap: (){
+                            setState(() {
+                              b?b=false:b=true;
+                            });
+                          },
+                          child: circleDay('Tue', context, b)),
+                      GestureDetector(
+                          onTap: (){
+                            setState(() {
+                              c?c=false:c=true;
+                            });
+                          },
+                          child: circleDay('Wed', context, c)),
+                      GestureDetector(
+                          onTap: (){
+                            setState(() {
+                              d?d=false:d=true;
+                            });
+                          },
+                          child: circleDay('Thu', context, d)),
+                      GestureDetector(
+                          onTap: (){
+                            setState(() {
+                              e?e=false:e=true;
+                            });
+                          },
+                          child: circleDay('Fri', context, e)),
+                      GestureDetector(
+                          onTap: (){
+                            setState(() {
+                              f?f=false:f=true;
+                            });
+                          },
+                          child: circleDay('Sat', context, f)),
+                      GestureDetector(
+                          onTap: (){
+                            setState(() {
+                              g?g=false:g=true;
+                            });
+                          },
+                          child: circleDay('Sun', context, g)),
+
+                    ],
+                  ),
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: <Widget>[
-                    circleDay('Mon', context, false),
-                    circleDay('Tue', context, true),
-                    circleDay('Wed', context, true),
-                    circleDay('Thu', context, true),
-                    circleDay('Fri', context, false),
-                    circleDay('Sat', context, true),
-                    circleDay('Sun', context, false),
-                  ],
-                ),
                 SizedBox(
-                  height: 60.0,
+                  height: 40.0,
                 ),
                 SizedBox(
                   height: 2.0,
@@ -142,6 +188,8 @@ class _AddAlarmState extends State<AddAlarm> {
                         // });
                       }
                     }),
+
+
             /*FloatingActionButton.extended(
                     backgroundColor: Theme
                         .of(context)
