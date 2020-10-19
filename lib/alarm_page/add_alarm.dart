@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:alarm/alarm_page/circle_day.dart';
 
+bool n=false;
+
 class AddAlarm extends StatefulWidget {
   AddAlarm({Key key}) : super(key: key);
 
@@ -8,6 +10,10 @@ class AddAlarm extends StatefulWidget {
 }
 
 class _AddAlarmState extends State<AddAlarm> {
+  bool tog(bool n){
+    n?n=false:n=true;
+    return n;
+  }
 
   TimeOfDay _selectedTime;
   ValueChanged<TimeOfDay> selectTime;
@@ -26,11 +32,13 @@ class _AddAlarmState extends State<AddAlarm> {
         backgroundColor: Color(0xff1B2C57),
         title: Column(
           children: <Widget>[
+
             Icon(Icons.alarm_add, color: Color(0xff65D1BA),),
             Text('Add alarm', style: TextStyle(
               color: Color(0xff65D1BA),
               fontSize: 25.0
-            ))
+            ),
+            ),
           ],
         ),
       ),
@@ -54,13 +62,19 @@ class _AddAlarmState extends State<AddAlarm> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
-                  circleDay('Mon', context, false),
-                  circleDay('Tue', context, true),
-                  circleDay('Wed', context, true),
-                  circleDay('Thu', context, true),
-                  circleDay('Fri', context, false),
-                  circleDay('Sat', context, true),
-                  circleDay('Sun', context, false),
+                  GestureDetector(
+                      onTap: (){
+                        setState(() {
+                          tog(n);
+                        });
+                      },
+                      child: circleDay('Mon', context, n)),
+                  circleDay('Tue', context, n),
+                  circleDay('Wed', context, n),
+                  circleDay('Thu', context, n),
+                  circleDay('Fri', context, n),
+                  circleDay('Sat', context, n),
+                  circleDay('Sun', context, n),
                 ],
               ),
               SizedBox(height: 60.0,),
