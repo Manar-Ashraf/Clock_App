@@ -1,5 +1,3 @@
-import 'dart:async';
-import 'package:alarm/screens/home_screen.dart';
 import 'package:splashscreen/splashscreen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';

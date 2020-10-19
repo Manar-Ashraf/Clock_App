@@ -14,14 +14,11 @@ Widget circleDay(day, context, selected){
         child: Text(
           day,
           style: TextStyle(
-            color: Colors.white,
-            fontSize: 12.0
+            color: Colors.black,
+            fontSize: 14.0,
           ),
         ),
       ),
-    ),
-
-
-
+    )
   );
 }

@@ -1,22 +1,10 @@
 import 'package:alarm/services/world_time.dart';
-import 'package:alarm/size_config.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
-
 import 'clock.dart';
 import 'country_card.dart';
 import 'time_in_hour_and_minute.dart';
 
 class Body extends StatelessWidget {
- /* Future<String> setupWorldTime(String url)async{
-String time;
-  WorldTime instance=WorldTime(url:url );
-    await instance.getTime();
-    return  time=instance.time;
-  }*/
-//String a=('Europe/Istanbul');
-
-
 
   @override
   Widget build(BuildContext context) {
@@ -71,7 +59,7 @@ String time;
 
                   CountryCard(
                     country: "Yekaterinburg, Russia",
-                    timeZone: "+3 HRS ",
+                    timeZone: "+1 HRS ",
                     iconSrc: "assets/icons/moscow.svg",
                     url: 'Asia/Yekaterinburg',
                     time: '..:..',
@@ -103,7 +91,7 @@ String time;
                   ),
                   CountryCard(
                     country: "Kolkata, India",
-                    timeZone: "+3 HRS ",
+                    timeZone: "+3:30 HRS ",
                     iconSrc: "assets/icons/india.svg",
                     url: 'Asia/Kolkata',
                     time: '..:..',
@@ -111,7 +99,7 @@ String time;
                   ),
                   CountryCard(
                     country: "Toronto, Canada",
-                    timeZone: "+2 HRS ",
+                    timeZone: "-6 HRS ",
                     iconSrc: "assets/icons/canada.svg",
                     url: 'America/Toronto',
                     time: '..:..',

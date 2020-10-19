@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import '../../size_config.dart';
 
+// ignore: must_be_immutable
 class CountryCard extends StatefulWidget {
   CountryCard({
     this.time,
@@ -95,8 +96,6 @@ class _CountryCardState extends State<CountryCard> {
                         time,
                         style:/*TextStyle(fontSize: 10),*/Theme.of(context).textTheme.headline4,softWrap: true,
                       ),
-
-
                   ],
                 )
               ],
