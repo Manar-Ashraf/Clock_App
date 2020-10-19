@@ -71,7 +71,7 @@ String time;
 
                   CountryCard(
                     country: "Yekaterinburg, Russia",
-                    timeZone: "+1 HRS ",
+                    timeZone: "+3 HRS ",
                     iconSrc: "assets/icons/moscow.svg",
                     url: 'Asia/Yekaterinburg',
                     time: '..:..',
@@ -103,7 +103,7 @@ String time;
                   ),
                   CountryCard(
                     country: "Kolkata, India",
-                    timeZone: "+3:30 HRS ",
+                    timeZone: "+3 HRS ",
                     iconSrc: "assets/icons/india.svg",
                     url: 'Asia/Kolkata',
                     time: '..:..',
@@ -111,7 +111,7 @@ String time;
                   ),
                   CountryCard(
                     country: "Toronto, Canada",
-                    timeZone: "-6 HRS ",
+                    timeZone: "+2 HRS ",
                     iconSrc: "assets/icons/canada.svg",
                     url: 'America/Toronto',
                     time: '..:..',
