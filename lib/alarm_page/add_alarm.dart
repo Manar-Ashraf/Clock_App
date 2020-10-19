@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:alarm/alarm_page/circle_day.dart';
 
-bool n=false;
-
+bool a=true,b=false,c=true,d=true,e=true,f=true,g=true;
+bool tog(bool n){
+  n?n=false:n=true;
+  return n;
+}
 class AddAlarm extends StatefulWidget {
   AddAlarm({Key key}) : super(key: key);
 
@@ -10,19 +13,20 @@ class AddAlarm extends StatefulWidget {
 }
 
 class _AddAlarmState extends State<AddAlarm> {
-  bool tog(bool n){
-    n?n=false:n=true;
-    return n;
-  }
+
 
   TimeOfDay _selectedTime;
   ValueChanged<TimeOfDay> selectTime;
 
+
+
   @override
   void initState() {
      _selectedTime = new TimeOfDay(hour: 12, minute: 30);
+
     super.initState();
   }
+
 
   @override
   Widget build(BuildContext context) {
@@ -59,23 +63,64 @@ class _AddAlarmState extends State<AddAlarm> {
                 },
               ),
               SizedBox(height: 30.0,),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: <Widget>[
-                  GestureDetector(
-                      onTap: (){
-                        setState(() {
-                          tog(n);
-                        });
-                      },
-                      child: circleDay('Mon', context, n)),
-                  circleDay('Tue', context, n),
-                  circleDay('Wed', context, n),
-                  circleDay('Thu', context, n),
-                  circleDay('Fri', context, n),
-                  circleDay('Sat', context, n),
-                  circleDay('Sun', context, n),
-                ],
+              Expanded(
+
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+
+                  children: <Widget>[
+                    GestureDetector(
+                        onTap: (){
+                          setState(() {
+                            a?a=false:a=true;
+                          });
+                        },
+                        child: circleDay('Mon', context, a)),
+                    GestureDetector(
+                        onTap: (){
+                          setState(() {
+                            b?b=false:b=true;
+                          });
+                        },
+                        child: circleDay('Tue', context, b)),
+                    GestureDetector(
+                        onTap: (){
+                          setState(() {
+                            c?c=false:c=true;
+                          });
+                        },
+                        child: circleDay('Wed', context, c)),
+                    GestureDetector(
+                        onTap: (){
+                          setState(() {
+                            d?d=false:d=true;
+                          });
+                        },
+                        child: circleDay('Thu', context, d)),
+                    GestureDetector(
+                        onTap: (){
+                          setState(() {
+                            e?e=false:e=true;
+                          });
+                        },
+                        child: circleDay('Fri', context, e)),
+                    GestureDetector(
+                        onTap: (){
+                          setState(() {
+                            f?f=false:f=true;
+                          });
+                        },
+                        child: circleDay('Sat', context, f)),
+                    GestureDetector(
+                        onTap: (){
+                          setState(() {
+                            g?g=false:g=true;
+                          });
+                        },
+                        child: circleDay('Sun', context, g)),
+
+                  ],
+                ),
               ),
               SizedBox(height: 60.0,),
               SizedBox(height: 2.0, child: Container(color: Colors.white30,),),

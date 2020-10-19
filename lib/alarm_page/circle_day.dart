@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 Widget circleDay(day, context, selected){
   return Container(
-    width: 50.0,
+    width: 40.0,
     height: 50.0,
     decoration: BoxDecoration(
       color: (selected)?Theme.of(context).accentColor:Colors.transparent,
@@ -15,10 +15,13 @@ Widget circleDay(day, context, selected){
           day,
           style: TextStyle(
             color: Colors.white,
-            fontSize: 20.0
+            fontSize: 12.0
           ),
         ),
       ),
-    )
+    ),
+
+
+
   );
 }
